@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Referencia local de clases W3.CSS 6 Beta.">
+    <title>W3.CSS — Referencia de clases</title>
+
+   <!-- Biblioteca W3.CSS descargada en local -->
+     <link rel="stylesheet" href="css/w3.css">
+
+   <!-- Hoja de estilos propia del proyecto -->
+     <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    
+<header class="cabecera">
+    <button id="abrir-menu" class="boton-menu" type="button"
+            aria-controls="menu-lateral" aria-expanded="false"
+            aria-label="Abrir menú lateral">☰</button>
+
+    <a class="marca" href="#inicio" aria-label="Inicio de la referencia">
+        <span class="marca-icono">W3</span>
+        <span>CSS Reference</span>
+    </a>
+
+    <span class="etiqueta-version">6 Beta · referencia local</span>
+
+    <!-- Botón para alternar entre modo claro y oscuro -->
+    <button id="alternar-tema" class="boton-tema" type="button"
+            aria-label="Activar modo oscuro"
+            aria-pressed="false"
+            title="Cambiar tema">🌙</button>
+</header>
+
+
+    <div id="fondo-menu" class="fondo-menu" hidden></div>
+    <aside id="menu-lateral" class="menu-lateral" aria-label="Navegación de referencia">
+        <div class="menu-cabecera">
+            <strong>W3.CSS Classes</strong>
+            <button id="cerrar-menu" class="boton-cerrar" type="button" aria-label="Cerrar menú">×</button>
+        </div>
+        <label class="etiqueta-busqueda" for="buscador">Buscar una clase</label>
+        <input id="buscador" class="buscador" type="search" placeholder="Ej.: w3-flex" autocomplete="off">
+        <nav id="navegacion">
+            <a href="#container">Container</a>
+            <a href="#table">Table</a>
+            <a href="#card">Card</a>
+            <a href="#responsive">Responsive</a>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#grid">Grid</a>
+            <a href="#gaps">Grid and Flex Gaps</a>
+            <a href="#layout">Layout</a>
+            <a href="#navigation">Navigation</a>
+            <a href="#dropdown">Dropdown</a>
+            <a href="#button">Button</a>
+            <a href="#input">Input</a>
+            <a href="#modal">Modal and Tooltip</a>
+            <a href="#animation">Animation</a>
+            <a href="#font-text">Font and Text</a>
+            <a href="#display">Display</a>
+            <a href="#effects">Effects</a>
+            <a href="#background">Background Color</a>
+            <a href="#text-color">Text Color</a>
+            <a href="#hover">Hover</a>
+            <a href="#round">Round</a>
+            <a href="#padding">Padding</a>
+            <a href="#margin">Margin</a>
+            <a href="#border">Border</a>
+            <a href="#dark-mode">Dark Mode</a>
+            <a href="#variables">CSS Variables</a>
+        </nav>
+        <p class="nota-menu">Página de consulta creada para estudiar sin conexión.</p>
+    </aside>
+
+    <main id="contenido" class="contenido">
+        
+<section id="inicio" class="hero">
+    <p class="sobre-titulo">GUÍA DE CONSULTA</p>
+
+    <h1>W3.CSS Classes</h1>
+
+    <p>
+        Referencia local de clases y variables de W3.CSS 6 Beta,
+        organizada por temas para consultar rápidamente.
+    </p>
+
+    <div class="hero-detalles">
+        <span>✓ Sin dependencias externas</span>
+        <span>⌕ Búsqueda por clase o descripción</span>
+        <span>↗ Navegación por secciones</span>
+
+        <span>
+            <a href="https://www.w3schools.com/w3css/default.asp"
+               target="_blank"
+               rel="noopener noreferrer"
+               style="color: white;">
+                🎨 Sitio oficial de W3.CSS
+            </a>
+        </span>
+    </div>
+</section>
+
+
+        <section class="panel-aviso">
+            <strong>Nota sobre la versión</strong>
+            <p>El contenido de esta página se ha organizado a partir del texto de referencia compartido. La hoja <code>css/estilos.css</code> es el diseño de esta página; no es la hoja oficial de W3.CSS. Si después quieres probar ejemplos reales del framework, guarda también la hoja oficial en local y enlázala por separado.</p>
+        </section>
+
+        <div class="barra-resultados">
+            <span id="contador">Mostrando todas las secciones</span>
+            <button id="limpiar-busqueda" class="boton-secundario" type="button">Limpiar búsqueda</button>
+        </div>
+
+        <section id="container" class="seccion grupo-filtrable">
+            <div class="titulo-seccion"><span>01</span><div><p>CLASES</p><h2>Container Classes</h2></div></div>
+            <p class="introduccion">Contenedores, paneles y elementos auxiliares para estructurar el contenido.</p>
+            <div class="tabla-contenedor"><table><thead><tr><th>Clase</th><th>Qué define</th><th>Acción</th></tr></thead><tbody>
+                <tr><td><code>w3-container</code></td><td>Contenedor HTML con 16 px de relleno a izquierda y derecha.</td><td><button onclick="mostrarEjemplo('w3-container')">Mostrar</button></td></tr>
+                <tr><td><code>w3-header</code></td><td>Uso como cabecera, según la referencia.</td><td><button onclick="mostrarEjemplo('w3-header')">Mostrar</button></td></tr>
+                <tr><td><code>w3-footer</code></td><td>Uso como pie de página, según la referencia.</td><td><button onclick="mostrarEjemplo('w3-footer')">Mostrar</button></td></tr>
+                <tr><td><code>w3-panel</code></td><td>Contenedor con 16 px de relleno lateral y margen vertical de 16 px; útil para notas y citas.</td><td><button onclick="mostrarEjemplo('w3-panel')">Mostrar</button></td></tr>
+                <tr><td><code>w3-badge</code></td><td>Insignia circular.</td><td><button onclick="mostrarEjemplo('w3-badge')">Mostrar</button></td></tr>
+                <tr><td><code>w3-tag</code></td><td>Etiqueta rectangular.</td><td><button onclick="mostrarEjemplo('w3-tag')">Mostrar</button></td></tr>
+                <tr><td><code>w3-ul</code></td><td>Lista sin ordenar con estilo W3.CSS.</td><td><button onclick="mostrarEjemplo('w3-ul')">Mostrar</button></td></tr>
+                <tr><td><code>w3-display-container</code></td><td>Contenedor para clases de posicionamiento.</td><td><button onclick="mostrarEjemplo('w3-display-container')">Mostrar</button></td></tr>
+                <tr><td><code>w3-block</code></td><td>Permite que un elemento ocupe todo el ancho disponible.</td><td><button onclick="mostrarEjemplo('w3-block')">Mostrar</button></td></tr>
+                <tr><td><code>w3-code</code></td><td>Contenedor para bloques de código.</td><td><button onclick="mostrarEjemplo('w3-code')">Mostrar</button></td></tr>
+                <tr><td><code>w3-codespan</code></td><td>Contenedor en línea para fragmentos de código.</td><td><button onclick="mostrarEjemplo('w3-codespan')">Mostrar</button></td></tr>
+                <tr><td><code>w3-content</code></td><td>Centra horizontalmente un contenedor con ancho máximo predeterminado de 980 px.</td><td><button onclick="mostrarEjemplo('w3-content')">Mostrar</button></td></tr>
+                <tr><td><code>w3-auto</code></td><td>Contenedor centrado y adaptable con anchos máximos según el tamaño de pantalla.</td><td><button onclick="mostrarEjemplo('w3-auto')">Mostrar</button></td></tr>
+                <tr><td><code>w3-stretch</code></td><td>Extiende el elemento más allá de los bordes interiores de su contenedor.</td><td><button onclick="mostrarEjemplo('w3-stretch')">Mostrar</button></td></tr>
+                <tr><td><code>w3-rtl</code></td><td>Ajusta la dirección del texto de derecha a izquierda.</td><td><button onclick="mostrarEjemplo('w3-rtl')">Mostrar</button></td></tr>
+                <tr><td><code>w3-ltr</code></td><td>Ajusta la dirección del texto de izquierda a derecha.</td><td><button onclick="mostrarEjemplo('w3-ltr')">Mostrar</button></td></tr>
+            </tbody></table></div>
+        </section>
+
+       <section id="table" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>02</span><div><p>CLASES</p><h2>Table Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-table</code></td>
+                    <td>Contenedor para una tabla HTML.</td>
+                    <td><button onclick="mostrarEjemplo('w3-table')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-striped</code></td>
+                    <td>Filas con fondo alterno.</td>
+                    <td><button onclick="mostrarEjemplo('w3-striped')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-border</code></td>
+                    <td>Borde alrededor de la tabla o elemento.</td>
+                    <td><button onclick="mostrarEjemplo('w3-border')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-bordered</code></td>
+                    <td>Líneas de separación entre filas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-bordered')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-centered</code></td>
+                    <td>Centra el texto de encabezados y celdas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-centered')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-table-all</code></td>
+                    <td>Tabla de ancho completo, con bordes y fondos alternos.</td>
+                    <td><button onclick="mostrarEjemplo('w3-table-all')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-hoverable</code></td>
+                    <td>Resalta las filas al pasar el puntero.</td>
+                    <td><button onclick="mostrarEjemplo('w3-hoverable')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-responsive</code></td>
+                    <td>Añade desplazamiento horizontal cuando la tabla es demasiado ancha.</td>
+                    <td><button onclick="mostrarEjemplo('w3-responsive')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="card" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>03</span><div><p>CLASES</p><h2>Card Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-card</code></td>
+                    <td>Equivale a <code>w3-card-2</code>.</td>
+                    <td><button onclick="mostrarEjemplo('w3-card')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-card-2</code></td>
+                    <td>Añade una sombra ligera; no asigna color de fondo.</td>
+                    <td><button onclick="mostrarEjemplo('w3-card-2')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-card-4</code></td>
+                    <td>Añade una sombra más marcada; no asigna color de fondo.</td>
+                    <td><button onclick="mostrarEjemplo('w3-card-4')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="responsive" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>04</span><div><p>CLASES</p><h2>Responsive Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-row</code></td>
+                    <td>Fila de contenido fluido y adaptable.</td>
+                    <td><button onclick="mostrarEjemplo('w3-row')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-row-padding</code></td>
+                    <td>Fila cuyas columnas reciben relleno predeterminado.</td>
+                    <td><button onclick="mostrarEjemplo('w3-row-padding')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-half</code></td>
+                    <td>Columna adaptable que ocupa la mitad de la fila.</td>
+                    <td><button onclick="mostrarEjemplo('w3-half')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-third</code></td>
+                    <td>Columna que ocupa un tercio.</td>
+                    <td><button onclick="mostrarEjemplo('w3-third')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-twothird</code></td>
+                    <td>Columna que ocupa dos tercios.</td>
+                    <td><button onclick="mostrarEjemplo('w3-twothird')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-quarter</code></td>
+                    <td>Columna que ocupa un cuarto.</td>
+                    <td><button onclick="mostrarEjemplo('w3-quarter')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-threequarter</code></td>
+                    <td>Columna que ocupa tres cuartos.</td>
+                    <td><button onclick="mostrarEjemplo('w3-threequarter')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-col</code></td>
+                    <td>Contenedor de columna adaptable.</td>
+                    <td><button onclick="mostrarEjemplo('w3-col')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-rest</code></td>
+                    <td>Ocupa el espacio restante de la columna.</td>
+                    <td><button onclick="mostrarEjemplo('w3-rest')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>l1-l12</code></td>
+                    <td>Tamaños para pantallas grandes.</td>
+                    <td><button onclick="mostrarEjemplo('l1-l12')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>m1-m12</code></td>
+                    <td>Tamaños para pantallas medianas.</td>
+                    <td><button onclick="mostrarEjemplo('m1-m12')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>s1-s12</code></td>
+                    <td>Tamaños para pantallas pequeñas.</td>
+                    <td><button onclick="mostrarEjemplo('s1-s12')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-hide-small</code></td>
+                    <td>Oculta el contenido en pantallas pequeñas (menos de 601 px).</td>
+                    <td><button onclick="mostrarEjemplo('w3-hide-small')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-hide-medium</code></td>
+                    <td>Oculta el contenido en pantallas medianas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-hide-medium')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-hide-large</code></td>
+                    <td>Oculta el contenido en pantallas grandes (más de 992 px).</td>
+                    <td><button onclick="mostrarEjemplo('w3-hide-large')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-image</code></td>
+                    <td>Imagen adaptable.</td>
+                    <td><button onclick="mostrarEjemplo('w3-image')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-mobile</code></td>
+                    <td>Hace que los elementos se muestren como bloques en dispositivos móviles.</td>
+                    <td><button onclick="mostrarEjemplo('w3-mobile')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="flexbox" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>05</span><div><p>CLASES</p><h2>Flexbox Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-flex</code></td>
+                    <td>Contenedor Flexbox para una distribución unidimensional.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-wrap</code></td>
+                    <td>Permite que los elementos pasen a nuevas líneas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-wrap')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-column</code></td>
+                    <td>Organiza los elementos en columna.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-column')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-start</code></td>
+                    <td>Alinea los elementos al inicio del eje principal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-start')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-center</code></td>
+                    <td>Centra los elementos en el eje principal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-center')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-end</code></td>
+                    <td>Alinea los elementos al final del eje principal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-end')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-between</code></td>
+                    <td>Distribuye espacio entre los elementos.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-between')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-around</code></td>
+                    <td>Distribuye espacio alrededor de cada elemento.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-around')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-evenly</code></td>
+                    <td>Distribuye espacio uniforme entre elementos y extremos.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-evenly')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-align-start</code></td>
+                    <td>Alinea al inicio del eje transversal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-align-start')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-align-center</code></td>
+                    <td>Centra en el eje transversal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-align-center')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-align-end</code></td>
+                    <td>Alinea al final del eje transversal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-align-end')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-align-stretch</code></td>
+                    <td>Estira los elementos para llenar su línea.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-align-stretch')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-1</code></td>
+                    <td>Elemento flexible que crece y se encoge desde una base cero.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-1')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-auto</code></td>
+                    <td>Elemento flexible con base automática.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-auto')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-none</code></td>
+                    <td>Elemento que no crece ni se encoge.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-none')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-shrink-0</code></td>
+                    <td>Evita que el elemento se encoja.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-shrink-0')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-flex-spacer</code></td>
+                    <td>Añade un margen automático al inicio en línea.</td>
+                    <td><button onclick="mostrarEjemplo('w3-flex-spacer')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="grid" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>06</span><div><p>CLASES</p><h2>Grid Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-grid</code></td>
+                    <td>Contenedor CSS Grid para distribuciones bidimensionales.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-padding</code></td>
+                    <td>Grid con separación de 16 px entre filas y columnas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-padding')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-2</code></td>
+                    <td>Dos columnas iguales; mantiene el número de columnas en pantallas pequeñas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-2')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-3</code></td>
+                    <td>Tres columnas iguales.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-3')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-4</code></td>
+                    <td>Cuatro columnas iguales.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-4')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-auto-xsmall</code></td>
+                    <td>Grid automático con ancho mínimo de columna de 150 px cuando hay espacio.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-auto-xsmall')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-auto-small</code></td>
+                    <td>Grid automático con ancho mínimo de 200 px.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-auto-small')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-auto</code></td>
+                    <td>Grid automático con ancho mínimo de 250 px.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-auto')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-auto-large</code></td>
+                    <td>Grid automático con ancho mínimo de 300 px.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-auto-large')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-auto-xlarge</code></td>
+                    <td>Grid automático con ancho mínimo de 350 px.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-auto-xlarge')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-span-2</code></td>
+                    <td>Hace que un elemento ocupe dos columnas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-span-2')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-span-3</code></td>
+                    <td>Hace que un elemento ocupe tres columnas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-span-3')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-grid-span-all</code></td>
+                    <td>Hace que un elemento ocupe todas las columnas explícitas.</td>
+                    <td><button onclick="mostrarEjemplo('w3-grid-span-all')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="gaps" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>07</span><div><p>CLASES</p><h2>Grid and Flexbox Gap Classes</h2></div></div>
+    <p class="introduccion">Las clases gap establecen separación entre filas y columnas. No crean por sí mismas un contenedor Grid o Flexbox.</p>
+    
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Separación</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-gap-small</code></td>
+                    <td>8 px</td>
+                    <td><button onclick="mostrarEjemplo('w3-gap-small')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-gap</code></td>
+                    <td>16 px</td>
+                    <td><button onclick="mostrarEjemplo('w3-gap')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-gap-large</code></td>
+                    <td>24 px</td>
+                    <td><button onclick="mostrarEjemplo('w3-gap-large')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+       <section id="layout" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>08</span><div><p>CLASES</p><h2>Layout Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-cell-row</code></td>
+                    <td>Contenedor de columnas de disposición tipo celda.</td>
+                    <td><button onclick="mostrarEjemplo('w3-cell-row')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-cell</code></td>
+                    <td>Columna o celda del diseño.</td>
+                    <td><button onclick="mostrarEjemplo('w3-cell')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-cell-top</code></td>
+                    <td>Alinea el contenido arriba.</td>
+                    <td><button onclick="mostrarEjemplo('w3-cell-top')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-cell-middle</code></td>
+                    <td>Alinea el contenido verticalmente en el centro.</td>
+                    <td><button onclick="mostrarEjemplo('w3-cell-middle')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-cell-bottom</code></td>
+                    <td>Alinea el contenido abajo.</td>
+                    <td><button onclick="mostrarEjemplo('w3-cell-bottom')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+       <section id="navigation" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>09</span><div><p>CLASES</p><h2>Bar Classes — Navigation</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-bar</code></td>
+                    <td>Barra horizontal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-bar')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-bar-block</code></td>
+                    <td>Barra vertical.</td>
+                    <td><button onclick="mostrarEjemplo('w3-bar-block')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-bar-item</code></td>
+                    <td>Estilo común para los elementos de una barra.</td>
+                    <td><button onclick="mostrarEjemplo('w3-bar-item')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-sidebar</code></td>
+                    <td>Barra lateral; puede superponerse al contenido o desplazarlo.</td>
+                    <td><button onclick="mostrarEjemplo('w3-sidebar')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-collapse</code></td>
+                    <td>Se combina con <code>w3-sidebar</code> para navegación lateral adaptable automática; requiere contenido dentro de <code>w3-main</code>.</td>
+                    <td><button onclick="mostrarEjemplo('w3-collapse')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-main</code></td>
+                    <td>Contenedor del contenido principal para navegación con <code>w3-collapse</code>.</td>
+                    <td><button onclick="mostrarEjemplo('w3-main')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+       <section id="dropdown" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>10</span><div><p>CLASES</p><h2>Dropdown Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-dropdown-click</code></td>
+                    <td>Elemento desplegable que se abre al hacer clic.</td>
+                    <td><button onclick="mostrarEjemplo('w3-dropdown-click')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-dropdown-hover</code></td>
+                    <td>Muestra el contenido al pasar el puntero o al recibir foco de teclado.</td>
+                    <td><button onclick="mostrarEjemplo('w3-dropdown-hover')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-dropdown-content</code></td>
+                    <td>Contenido desplegable oculto y posicionado de forma absoluta; con clic necesita JavaScript.</td>
+                    <td><button onclick="mostrarEjemplo('w3-dropdown-content')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="button" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>11</span><div><p>CLASES</p><h2>Button Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-button</code></td>
+                    <td>Botón rectangular con fondo gris al pasar el puntero.</td>
+                    <td><button onclick="mostrarEjemplo('w3-button')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-btn</code></td>
+                    <td>Botón rectangular con sombra al pasar el puntero.</td>
+                    <td><button onclick="mostrarEjemplo('w3-btn')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-circle</code></td>
+                    <td>Puede convertir un elemento en circular.</td>
+                    <td><button onclick="mostrarEjemplo('w3-circle')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-ripple</code></td>
+                    <td>Efecto de onda al interactuar.</td>
+                    <td><button onclick="mostrarEjemplo('w3-ripple')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-bar</code></td>
+                    <td>Permite agrupar elementos en una barra horizontal.</td>
+                    <td><button onclick="mostrarEjemplo('w3-bar-btn')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td><code>w3-block</code></td>
+                    <td>Hace que un botón ocupe todo el ancho.</td>
+                    <td><button onclick="mostrarEjemplo('w3-block-btn')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<section id="input" class="seccion grupo-filtrable">
+            <div class="titulo-seccion"><span>12</span><div><p>CLASES</p><h2>Input Classes</h2></div></div>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Qué define</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>w3-input</code></td>
+                            <td>Estilo para elementos de entrada de formulario.</td>
+                            <td><button onclick="mostrarEjemplo('w3-input')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-check</code></td>
+                            <td>Entrada de tipo casilla de verificación.</td>
+                            <td><button onclick="mostrarEjemplo('w3-check')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-radio</code></td>
+                            <td>Entrada de tipo botón de opción.</td>
+                            <td><button onclick="mostrarEjemplo('w3-radio')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-select</code></td>
+                            <td>Elemento de selección.</td>
+                            <td><button onclick="mostrarEjemplo('w3-select')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-disabled</code></td>
+                            <td>Apariencia deshabilitada y cursor de acción no permitida.</td>
+                            <td><button onclick="mostrarEjemplo('w3-disabled')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-input</code></td>
+                            <td>Anima la anchura del campo de entrada hasta el 100 %.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-input')">Mostrar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="modal" class="seccion grupo-filtrable">
+            <div class="titulo-seccion"><span>13</span><div><p>CLASES</p><h2>Modal and Tooltip Classes</h2></div></div>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Qué define</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>w3-modal</code></td>
+                            <td>Contenedor de una ventana modal.</td>
+                            <td><button onclick="mostrarEjemplo('w3-modal')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-modal-content</code></td>
+                            <td>Elemento emergente que contiene el contenido modal.</td>
+                            <td><button onclick="mostrarEjemplo('w3-modal-content')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-tooltip</code></td>
+                            <td>Contenedor del texto de ayuda al pasar el puntero o recibir foco.</td>
+                            <td><button onclick="mostrarEjemplo('w3-tooltip')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-text</code></td>
+                            <td>Texto de la ayuda emergente.</td>
+                            <td><button onclick="mostrarEjemplo('w3-text')">Mostrar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="animation" class="seccion grupo-filtrable">
+            <div class="titulo-seccion"><span>14</span><div><p>CLASES</p><h2>Animation Classes</h2></div></div>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Qué define</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>w3-animate-top</code></td>
+                            <td>Anima la entrada desde arriba.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-top')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-left</code></td>
+                            <td>Anima la entrada desde la izquierda.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-left')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-bottom</code></td>
+                            <td>Anima la entrada desde abajo.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-bottom')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-right</code></td>
+                            <td>Anima la entrada desde la derecha.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-right')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-opacity</code></td>
+                            <td>Anima la opacidad de 0 a 1.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-opacity')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-zoom</code></td>
+                            <td>Anima el tamaño de 0 a 100 %.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-zoom')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-fading</code></td>
+                            <td>Anima la opacidad de entrada y salida.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-fading')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-spin</code></td>
+                            <td>Gira un elemento 360 grados.</td>
+                            <td><button onclick="mostrarEjemplo('w3-spin')">Mostrar</button></td>
+                        </tr>
+                        <tr>
+                            <td><code>w3-animate-input</code></td>
+                            <td>Anima la anchura de un campo de entrada.</td>
+                            <td><button onclick="mostrarEjemplo('w3-animate-input')">Mostrar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="nota">Según la referencia, W3.CSS desactiva determinados efectos de animación y la transición de anchura de entrada cuando el usuario solicita movimiento reducido.</p>
+        </section>
+
+      <section id="font-text" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>15</span><div><p>CLASES</p><h2>Font and Text Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-tiny</code></td><td>Tamaño de fuente de 10 px.</td><td><button onclick="mostrarEjemplo('w3-tiny')">Mostrar</button></td></tr>
+                <tr><td><code>w3-small</code></td><td>12 px.</td><td><button onclick="mostrarEjemplo('w3-small')">Mostrar</button></td></tr>
+                <tr><td><code>w3-medium</code></td><td>15 px.</td><td><button onclick="mostrarEjemplo('w3-medium')">Mostrar</button></td></tr>
+                <tr><td><code>w3-large</code></td><td>18 px.</td><td><button onclick="mostrarEjemplo('w3-large')">Mostrar</button></td></tr>
+                <tr><td><code>w3-xlarge</code></td><td>24 px.</td><td><button onclick="mostrarEjemplo('w3-xlarge')">Mostrar</button></td></tr>
+                <tr><td><code>w3-xxlarge</code></td><td>36 px.</td><td><button onclick="mostrarEjemplo('w3-xxlarge')">Mostrar</button></td></tr>
+                <tr><td><code>w3-xxxlarge</code></td><td>48 px.</td><td><button onclick="mostrarEjemplo('w3-xxxlarge')">Mostrar</button></td></tr>
+                <tr><td><code>w3-jumbo</code></td><td>64 px.</td><td><button onclick="mostrarEjemplo('w3-jumbo')">Mostrar</button></td></tr>
+                <tr><td><code>w3-wide</code></td><td>Añade 4 px de espacio entre letras.</td><td><button onclick="mostrarEjemplo('w3-wide')">Mostrar</button></td></tr>
+                <tr><td><code>w3-serif</code></td><td>Fuente serif.</td><td><button onclick="mostrarEjemplo('w3-serif')">Mostrar</button></td></tr>
+                <tr><td><code>w3-sans-serif</code></td><td>Fuente sans-serif.</td><td><button onclick="mostrarEjemplo('w3-sans-serif')">Mostrar</button></td></tr>
+                <tr><td><code>w3-cursive</code></td><td>Fuente cursiva manuscrita.</td><td><button onclick="mostrarEjemplo('w3-cursive')">Mostrar</button></td></tr>
+                <tr><td><code>w3-monospace</code></td><td>Fuente monoespaciada.</td><td><button onclick="mostrarEjemplo('w3-monospace')">Mostrar</button></td></tr>
+                <tr><td><code>w3-center</code></td><td>Centra texto y elementos en línea.</td><td><button onclick="mostrarEjemplo('w3-center')">Mostrar</button></td></tr>
+                <tr><td><code>w3-bold</code> / <code>w3-text-bold</code></td><td>Texto en negrita.</td><td><button onclick="mostrarEjemplo('w3-bold')">Mostrar</button></td></tr>
+                <tr><td><code>w3-italic</code> / <code>w3-text-italic</code></td><td>Texto en cursiva.</td><td><button onclick="mostrarEjemplo('w3-italic')">Mostrar</button></td></tr>
+                <tr><td><code>w3-text-center</code></td><td>Centra el texto sin usar <code>!important</code>.</td><td><button onclick="mostrarEjemplo('w3-text-center')">Mostrar</button></td></tr>
+                <tr><td><code>w3-rtl</code> / <code>w3-ltr</code></td><td>Dirección del texto de derecha a izquierda o izquierda a derecha.</td><td><button onclick="mostrarEjemplo('w3-rtl')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="display" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>16</span><div><p>CLASES</p><h2>Display Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-left</code></td><td>Flota un elemento a la izquierda.</td><td><button onclick="mostrarEjemplo('w3-left')">Mostrar</button></td></tr>
+                <tr><td><code>w3-right</code></td><td>Flota un elemento a la derecha.</td><td><button onclick="mostrarEjemplo('w3-right')">Mostrar</button></td></tr>
+                <tr><td><code>w3-left-align</code></td><td>Alineación a la izquierda.</td><td><button onclick="mostrarEjemplo('w3-left-align')">Mostrar</button></td></tr>
+                <tr><td><code>w3-right-align</code></td><td>Alineación a la derecha.</td><td><button onclick="mostrarEjemplo('w3-right-align')">Mostrar</button></td></tr>
+                <tr><td><code>w3-justify</code></td><td>Justifica el texto a ambos lados.</td><td><button onclick="mostrarEjemplo('w3-justify')">Mostrar</button></td></tr>
+                <tr><td><code>w3-hide</code></td><td>Oculta el contenido (<code>display:none</code>).</td><td><button onclick="mostrarEjemplo('w3-hide')">Mostrar</button></td></tr>
+                <tr><td><code>w3-show</code> / <code>w3-show-block</code></td><td>Muestra el contenido como bloque.</td><td><button onclick="mostrarEjemplo('w3-show')">Mostrar</button></td></tr>
+                <tr><td><code>w3-show-inline-block</code></td><td>Muestra el contenido como bloque en línea.</td><td><button onclick="mostrarEjemplo('w3-show-inline-block')">Mostrar</button></td></tr>
+                <tr><td><code>w3-top</code></td><td>Fija un elemento arriba de la ventana.</td><td><button onclick="mostrarEjemplo('w3-top')">Mostrar</button></td></tr>
+                <tr><td><code>w3-bottom</code></td><td>Fija un elemento abajo de la ventana.</td><td><button onclick="mostrarEjemplo('w3-bottom')">Mostrar</button></td></tr>
+                <tr><td><code>w3-display-topleft</code></td><td>Posiciona arriba a la izquierda.</td><td><button onclick="mostrarEjemplo('w3-display-topleft')">Mostrar</button></td></tr>
+                <tr><td><code>w3-display-topright</code></td><td>Posiciona arriba a la derecha.</td><td><button onclick="mostrarEjemplo('w3-display-topright')">Mostrar</button></td></tr>
+                <tr><td><code>w3-display-bottomleft</code></td><td>Posiciona abajo a la izquierda.</td><td><button onclick="mostrarEjemplo('w3-display-bottomleft')">Mostrar</button></td></tr>
+                <tr><td><code>w3-display-bottomright</code></td><td>Posiciona abajo a la derecha.</td><td><button onclick="mostrarEjemplo('w3-display-bottomright')">Mostrar</button></td></tr>
+                <tr><td><code>w3-display-middle</code></td><td>Posiciona en el centro.</td><td><button onclick="mostrarEjemplo('w3-display-middle')">Mostrar</button></td></tr>
+                <tr><td><code>w3-display-hover</code></td><td>Muestra el contenido al pasar el puntero o al recibir foco.</td><td><button onclick="mostrarEjemplo('w3-display-hover')">Mostrar</button></td></tr>
+                <tr><td><code>w3-clear</code></td><td>Limpia elementos flotantes.</td><td><button onclick="mostrarEjemplo('w3-clear')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="effects" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>17</span><div><p>CLASES</p><h2>Effect Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-opacity</code></td><td>Transparencia con opacidad 0,6.</td><td><button onclick="mostrarEjemplo('w3-opacity')">Mostrar</button></td></tr>
+                <tr><td><code>w3-opacity-off</code></td><td>Opacidad completa (1).</td><td><button onclick="mostrarEjemplo('w3-opacity-off')">Mostrar</button></td></tr>
+                <tr><td><code>w3-opacity-min</code></td><td>Opacidad 0,75.</td><td><button onclick="mostrarEjemplo('w3-opacity-min')">Mostrar</button></td></tr>
+                <tr><td><code>w3-opacity-max</code></td><td>Opacidad 0,25.</td><td><button onclick="mostrarEjemplo('w3-opacity-max')">Mostrar</button></td></tr>
+                <tr><td><code>w3-grayscale</code> / <code>w3-greyscale</code></td><td>Escala de grises al 75 %; ambas grafías son equivalentes.</td><td><button onclick="mostrarEjemplo('w3-grayscale')">Mostrar</button></td></tr>
+                <tr><td><code>w3-grayscale-max</code></td><td>Escala de grises al 100 %.</td><td><button onclick="mostrarEjemplo('w3-grayscale-max')">Mostrar</button></td></tr>
+                <tr><td><code>w3-grayscale-min</code></td><td>Escala de grises al 50 %.</td><td><button onclick="mostrarEjemplo('w3-grayscale-min')">Mostrar</button></td></tr>
+                <tr><td><code>w3-sepia-min</code></td><td>Efecto sepia al 50 %.</td><td><button onclick="mostrarEjemplo('w3-sepia-min')">Mostrar</button></td></tr>
+                <tr><td><code>w3-sepia</code></td><td>Efecto sepia al 75 %.</td><td><button onclick="mostrarEjemplo('w3-sepia')">Mostrar</button></td></tr>
+                <tr><td><code>w3-sepia-max</code></td><td>Efecto sepia al 100 %.</td><td><button onclick="mostrarEjemplo('w3-sepia-max')">Mostrar</button></td></tr>
+                <tr><td><code>w3-overlay</code></td><td>Crea una capa superpuesta.</td><td><button onclick="mostrarEjemplo('w3-overlay')">Mostrar</button></td></tr>
+                <tr><td><code>w3-hover-shadow</code></td><td>Añade sombra al pasar el puntero.</td><td><button onclick="mostrarEjemplo('w3-hover-shadow')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+       <section id="background" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>18</span><div><p>CLASES</p><h2>Background Color Classes</h2></div></div>
+    <p class="introduccion">La referencia agrupa colores fijos y colores semánticos. Los nombres <code>gray</code> y <code>grey</code> pueden usarse como variantes cuando aparecen ambas grafías.</p>
+    
+    <div class="muestras-colores">
+        <span class="muestra red">w3-red</span><span class="muestra pink">w3-pink</span><span class="muestra purple">w3-purple</span><span class="muestra deep-purple">w3-deep-purple</span><span class="muestra indigo">w3-indigo</span><span class="muestra blue">w3-blue</span><span class="muestra light-blue">w3-light-blue</span><span class="muestra cyan">w3-cyan</span><span class="muestra teal">w3-teal</span><span class="muestra green">w3-green</span><span class="muestra light-green">w3-light-green</span><span class="muestra lime">w3-lime</span><span class="muestra yellow">w3-yellow</span><span class="muestra amber">w3-amber</span><span class="muestra orange">w3-orange</span><span class="muestra deep-orange">w3-deep-orange</span><span class="muestra brown">w3-brown</span><span class="muestra white">w3-white</span><span class="muestra light-gray">w3-light-gray / w3-light-grey</span><span class="muestra gray">w3-gray / w3-grey</span><span class="muestra dark-gray">w3-dark-gray / w3-dark-grey</span><span class="muestra black">w3-black</span><span class="muestra pale-blue">w3-pale-blue</span><span class="muestra pale-green">w3-pale-green</span>
+    </div>
+
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase semántica</th>
+                    <th>Uso indicado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-danger</code></td><td>Rojo: suele indicar una situación negativa.</td><td><button onclick="mostrarEjemplo('w3-danger')">Mostrar</button></td></tr>
+                <tr><td><code>w3-warning</code></td><td>Naranja: advertencia.</td><td><button onclick="mostrarEjemplo('w3-warning')">Mostrar</button></td></tr>
+                <tr><td><code>w3-success</code></td><td>Verde: resultado positivo.</td><td><button onclick="mostrarEjemplo('w3-success')">Mostrar</button></td></tr>
+                <tr><td><code>w3-info</code></td><td>Azul: información neutral.</td><td><button onclick="mostrarEjemplo('w3-info')">Mostrar</button></td></tr>
+                <tr><td><code>w3-note</code></td><td>Amarillo: aviso o nota.</td><td><button onclick="mostrarEjemplo('w3-note')">Mostrar</button></td></tr>
+                <tr><td><code>w3-transparent</code></td><td>Fondo transparente.</td><td><button onclick="mostrarEjemplo('w3-transparent')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="nota">La referencia indica que las clases de color explícitas conservan sus colores fijos en modo oscuro.</p>
+</section>
+
+
+        <section id="text-color" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>19</span><div><p>CLASES</p><h2>Text Color Classes</h2></div></div>
+    <p class="introduccion">Ejemplos de nombres incluidos en la referencia: <code>w3-text-red</code>, <code>w3-text-green</code>, <code>w3-text-blue</code>, y sus variantes gray/grey documentadas.</p>
+    
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase base de color</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-text-red</code></td><td>Aplica color de texto rojo fijo.</td><td><button onclick="mostrarEjemplo('w3-text-red')">Mostrar</button></td></tr>
+                <tr><td><code>w3-text-green</code></td><td>Aplica color de texto verde fijo.</td><td><button onclick="mostrarEjemplo('w3-text-green')">Mostrar</button></td></tr>
+                <tr><td><code>w3-text-blue</code></td><td>Aplica color de texto azul fijo.</td><td><button onclick="mostrarEjemplo('w3-text-blue')">Mostrar</button></td></tr>
+                <tr><td><code>w3-text-grey</code></td><td>Aplica color de texto gris fijo (variante gray admisible).</td><td><button onclick="mostrarEjemplo('w3-text-grey')">Mostrar</button></td></tr>
+                <tr><td><code>w3-text-black</code></td><td>Aplica color de texto negro fijo.</td><td><button onclick="mostrarEjemplo('w3-text-black')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="hover" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>20</span><div><p>CLASES</p><h2>Hover Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Familia</th>
+                    <th>Ejemplos</th>
+                    <th>Qué hace</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fondo</td>
+                    <td><code>w3-hover-blue</code>, <code>w3-hover-red</code>, <code>w3-hover-green</code>, etc.</td>
+                    <td>Aplica fondo y color de texto asociados al pasar el puntero.</td>
+                    <td><button onclick="mostrarEjemplo('w3-hover-blue')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td>Texto</td>
+                    <td><code>w3-hover-text-red</code>, <code>w3-hover-text-blue</code>, etc.</td>
+                    <td>Cambia el color del texto al pasar el puntero.</td>
+                    <td><button onclick="mostrarEjemplo('w3-hover-text-red')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td>Borde</td>
+                    <td><code>w3-hover-border-color</code></td>
+                    <td>Cambia el color del borde al interactuar.</td>
+                    <td><button onclick="mostrarEjemplo('w3-hover-border-color')">Mostrar</button></td>
+                </tr>
+                <tr>
+                    <td>Otros efectos</td>
+                    <td><code>w3-hover-opacity</code>, <code>w3-hover-shadow</code>, <code>w3-hover-none</code></td>
+                    <td>Controla transparencia, sombra, escala de grises, sepia o elimina efectos hover.</td>
+                    <td><button onclick="mostrarEjemplo('w3-hover-opacity')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="round" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>21</span><div><p>CLASES</p><h2>Round Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Radio de borde</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-round-small</code></td><td>2 px</td><td><button onclick="mostrarEjemplo('w3-round-small')">Mostrar</button></td></tr>
+                <tr><td><code>w3-round</code> / <code>w3-round-medium</code></td><td>4 px</td><td><button onclick="mostrarEjemplo('w3-round')">Mostrar</button></td></tr>
+                <tr><td><code>w3-round-large</code></td><td>8 px</td><td><button onclick="mostrarEjemplo('w3-round-large')">Mostrar</button></td></tr>
+                <tr><td><code>w3-round-xlarge</code></td><td>16 px</td><td><button onclick="mostrarEjemplo('w3-round-xlarge')">Mostrar</button></td></tr>
+                <tr><td><code>w3-round-xxlarge</code></td><td>32 px</td><td><button onclick="mostrarEjemplo('w3-round-xxlarge')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="padding" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>22</span><div><p>CLASES</p><h2>Padding Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Relleno</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-padding-small</code></td><td>4 px arriba/abajo y 8 px a los lados.</td><td><button onclick="mostrarEjemplo('w3-padding-small')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding</code></td><td>8 px arriba/abajo y 16 px a los lados.</td><td><button onclick="mostrarEjemplo('w3-padding')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding-large</code></td><td>12 px arriba/abajo y 24 px a los lados.</td><td><button onclick="mostrarEjemplo('w3-padding-large')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding-16</code></td><td>16 px arriba y abajo.</td><td><button onclick="mostrarEjemplo('w3-padding-16')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding-24</code></td><td>24 px arriba y abajo.</td><td><button onclick="mostrarEjemplo('w3-padding-24')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding-32</code></td><td>32 px arriba y abajo.</td><td><button onclick="mostrarEjemplo('w3-padding-32')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding-48</code></td><td>48 px arriba y abajo.</td><td><button onclick="mostrarEjemplo('w3-padding-48')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding-64</code></td><td>64 px arriba y abajo.</td><td><button onclick="mostrarEjemplo('w3-padding-64')">Mostrar</button></td></tr>
+                <tr><td><code>w3-padding-top-64</code>, <code>-48</code>, <code>-32</code>, <code>-24</code></td><td>Relleno superior de la cantidad indicada.</td><td><button onclick="mostrarEjemplo('w3-padding-top-64')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="margin" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>23</span><div><p>CLASES</p><h2>Margin Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Margen</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-margin</code></td><td>16 px alrededor del elemento.</td><td><button onclick="mostrarEjemplo('w3-margin')">Mostrar</button></td></tr>
+                <tr><td><code>w3-margin-top</code></td><td>16 px arriba.</td><td><button onclick="mostrarEjemplo('w3-margin-top')">Mostrar</button></td></tr>
+                <tr><td><code>w3-margin-right</code></td><td>16 px a la derecha.</td><td><button onclick="mostrarEjemplo('w3-margin-right')">Mostrar</button></td></tr>
+                <tr><td><code>w3-margin-bottom</code></td><td>16 px abajo.</td><td><button onclick="mostrarEjemplo('w3-margin-bottom')">Mostrar</button></td></tr>
+                <tr><td><code>w3-margin-left</code></td><td>16 px a la izquierda.</td><td><button onclick="mostrarEjemplo('w3-margin-left')">Mostrar</button></td></tr>
+                <tr><td><code>w3-section</code></td><td>16 px de margen arriba y abajo.</td><td><button onclick="mostrarEjemplo('w3-section')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="border" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>24</span><div><p>CLASES</p><h2>Border Classes</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>w3-border</code></td><td>Bordes en los cuatro lados.</td><td><button onclick="mostrarEjemplo('w3-border')">Mostrar</button></td></tr>
+                <tr><td><code>w3-border-top</code></td><td>Borde superior.</td><td><button onclick="mostrarEjemplo('w3-border-top')">Mostrar</button></td></tr>
+                <tr><td><code>w3-border-right</code></td><td>Borde derecho.</td><td><button onclick="mostrarEjemplo('w3-border-right')">Mostrar</button></td></tr>
+                <tr><td><code>w3-border-bottom</code></td><td>Borde inferior.</td><td><button onclick="mostrarEjemplo('w3-border-bottom')">Mostrar</button></td></tr>
+                <tr><td><code>w3-border-left</code></td><td>Borde izquierdo.</td><td><button onclick="mostrarEjemplo('w3-border-left')">Mostrar</button></td></tr>
+                <tr><td><code>w3-border-0</code></td><td>Elimina todos los bordes.</td><td><button onclick="mostrarEjemplo('w3-border-0')">Mostrar</button></td></tr>
+                <tr><td><code>w3-border-color</code></td><td>Muestra un borde con un color definido.</td><td><button onclick="mostrarEjemplo('w3-border-color')">Mostrar</button></td></tr>
+                <tr><td><code>w3-bottombar</code></td><td>Barra inferior gruesa.</td><td><button onclick="mostrarEjemplo('w3-bottombar')">Mostrar</button></td></tr>
+                <tr><td><code>w3-leftbar</code></td><td>Barra izquierda gruesa.</td><td><button onclick="mostrarEjemplo('w3-leftbar')">Mostrar</button></td></tr>
+                <tr><td><code>w3-rightbar</code></td><td>Barra derecha gruesa.</td><td><button onclick="mostrarEjemplo('w3-rightbar')">Mostrar</button></td></tr>
+                <tr><td><code>w3-topbar</code></td><td>Barra superior gruesa.</td><td><button onclick="mostrarEjemplo('w3-topbar')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <section id="dark-mode" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>25</span><div><p>CLASES</p><h2>Dark Mode Class</h2></div></div>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Qué define</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>w3-dark-mode</code></td>
+                    <td>Aplica valores de variables para modo oscuro, fondo oscuro, texto claro y <code>color-scheme: dark</code> a una página o sección.</td>
+                    <td><button onclick="mostrarEjemplo('w3-dark-mode')">Mostrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="nota">El modo oscuro cambia los colores basados en variables. Las clases explícitas de color conservan sus colores propios.</p>
+</section>
+
+
+        <section id="variables" class="seccion grupo-filtrable">
+    <div class="titulo-seccion"><span>26</span><div><p>VARIABLES</p><h2>CSS Variables</h2></div></div>
+    <p class="introduccion">La referencia indica que estas variables se pueden sobrescribir en tu propio CSS después de cargar W3.CSS; no hace falta editar el archivo del framework.</p>
+    
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th>Valor claro predeterminado</th>
+                    <th>Controla</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>--w3-font-family</code></td><td>Verdana, sans-serif</td><td>Fuente predeterminada del cuerpo.</td><td><button onclick="mostrarEjemplo('--w3-font-family')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-heading-font-family</code></td><td>"Segoe UI", Arial, sans-serif</td><td>Fuente predeterminada de encabezados.</td><td><button onclick="mostrarEjemplo('--w3-heading-font-family')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-font-size</code></td><td>15px</td><td>Tamaño de fuente predeterminado.</td><td><button onclick="mostrarEjemplo('--w3-font-size')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-line-height</code></td><td>1.5</td><td>Altura de línea.</td><td><button onclick="mostrarEjemplo('--w3-line-height')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-content-max-width</code></td><td>980px</td><td>Ancho máximo de <code>w3-content</code>.</td><td><button onclick="mostrarEjemplo('--w3-content-max-width')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-page-bg</code></td><td>#fff</td><td>Fondo de página.</td><td><button onclick="mostrarEjemplo('--w3-page-bg')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-text-color</code></td><td>#000</td><td>Color del texto.</td><td><button onclick="mostrarEjemplo('--w3-text-color')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-surface</code></td><td>#fff</td><td>Fondo de componentes.</td><td><button onclick="mostrarEjemplo('--w3-surface')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-surface-alt</code></td><td>#f1f1f1</td><td>Fondo alterno, rayado de tablas y código en línea.</td><td><button onclick="mostrarEjemplo('--w3-surface-alt')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-codespan-text</code></td><td>#d2143a</td><td>Color de texto de código en línea.</td><td><button onclick="mostrarEjemplo('--w3-codespan-text')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-border-color</code></td><td>#ccc</td><td>Color de borde predeterminado.</td><td><button onclick="mostrarEjemplo('--w3-border-color')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-border-light</code></td><td>#ddd</td><td>Separadores de filas y listas.</td><td><button onclick="mostrarEjemplo('--w3-border-light')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-hover-bg</code></td><td>#ccc</td><td>Fondo al pasar el puntero.</td><td><button onclick="mostrarEjemplo('--w3-hover-bg')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-hover-text</code></td><td>#000</td><td>Texto al pasar el puntero.</td><td><button onclick="mostrarEjemplo('--w3-hover-text')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-danger-bg</code></td><td>#dd0000</td><td>Fondo de peligro.</td><td><button onclick="mostrarEjemplo('--w3-danger-bg')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-danger-text</code></td><td>#fff</td><td>Texto de peligro.</td><td><button onclick="mostrarEjemplo('--w3-danger-text')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-note-bg</code></td><td>#fff599</td><td>Fondo de nota.</td><td><button onclick="mostrarEjemplo('--w3-note-bg')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-note-text</code></td><td>#000</td><td>Texto de nota.</td><td><button onclick="mostrarEjemplo('--w3-note-text')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-info-bg</code></td><td>#0a6fc2</td><td>Fondo informativo.</td><td><button onclick="mostrarEjemplo('--w3-info-bg')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-info-text</code></td><td>#fff</td><td>Texto informativo.</td><td><button onclick="mostrarEjemplo('--w3-info-text')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-warning-bg</code></td><td>#ffb305</td><td>Fondo de advertencia.</td><td><button onclick="mostrarEjemplo('--w3-warning-bg')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-warning-text</code></td><td>#000</td><td>Texto de advertencia.</td><td><button onclick="mostrarEjemplo('--w3-warning-text')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-success-bg</code></td><td>#008a00</td><td>Fondo de éxito.</td><td><button onclick="mostrarEjemplo('--w3-success-bg')">Mostrar</button></td></tr>
+                <tr><td><code>--w3-success-text</code></td><td>#fff</td><td>Texto de éxito.</td><td><button onclick="mostrarEjemplo('--w3-success-text')">Mostrar</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+        <!-- Ventana modal reutilizable para mostrar ejemplos -->
+<div id="modalEjemplo" class="w3-modal">
+
+    <div class="w3-modal-content w3-animate-top w3-card-4 modal-desplazado">
+
+        <!-- Cabecera de la ventana -->
+        <header class="w3-container w3-blue">
+            <span onclick="cerrarEjemplo()"
+                  class="w3-button w3-display-topright">&times;</span>
+
+            <h2 id="tituloEjemplo">Ejemplo W3.CSS</h2>
+        </header>
+
+        <!-- Aquí JavaScript insertará la demostración -->
+        <div id="contenidoEjemplo" class="w3-container w3-padding-16">
+        </div>
+
+        <!-- Pie de la ventana -->
+       <footer class="w3-container w3-light-grey w3-padding modal-footer">
+             <button class="w3-button w3-red"
+            onclick="cerrarEjemplo()">
+              Cerrar
+             </button>
+        </footer>
+    </div>
+</div>
+
+        <footer class="pie">
+            <p><strong>W3.CSS — Referencia local</strong></p>
+            <p>Proyecto didáctico basado en la documentación de W3.CSS de W3Schools, organizado con fines de estudio y aprendizaje.</p>
+            <p><strong>© 2026 Robert R. &amp; ChatGPT</strong></p>
+            <a href="#inicio">Volver al principio ↑</a>
+        </footer>
+    </main>
+      <!-- JavaScript propio: menú lateral, búsqueda y navegación. -->
+    <script src="js/app.js" defer></script>
+</body>
+</html>

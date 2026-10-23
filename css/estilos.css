@@ -1,0 +1,520 @@
+/* =========================================================
+   ESTILOS DE LA PÁGINA DE REFERENCIA
+   Esta hoja da estilo a nuestro sitio. No sustituye a w3.css.
+   Todo funciona en local y no importa fuentes externas.
+   ========================================================= */
+
+:root {
+    --color-fondo: #f4f7f9;
+    --color-panel: #ffffff;
+    --color-texto: #172b3a;
+    --color-suave: #607384;
+    --color-borde: #dbe3e9;
+    --color-azul: #04aa6d;
+    --color-azul-oscuro: #087f5b;
+    --sombra: 0 4px 18px rgba(23, 43, 58, .07);
+    --ancho-menu: 278px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+    margin: 0;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font: 15px/1.65 Arial, Helvetica, sans-serif;
+}
+a { color: #087f8c; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+code {
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #c21845;
+    background: #f8edf0;
+    font: .93em Consolas, "Courier New", monospace;
+    overflow-wrap: anywhere;
+}
+.salto-contenido {
+    position: absolute; left: -10000px; top: 8px;
+    background: #fff; padding: 10px; z-index: 2000;
+}
+.salto-contenido:focus { left: 8px; }
+
+.cabecera {
+    min-height: 64px;
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 24px;
+    background: #fff;
+    border-bottom: 1px solid var(--color-borde);
+    box-shadow: 0 2px 7px rgba(0,0,0,.04);
+}
+.marca {
+    display: flex; align-items: center; gap: 10px;
+    color: var(--color-texto); text-decoration: none;
+    font-weight: 750; font-size: 18px;
+}
+.marca-icono {
+    display: inline-grid; place-items: center;
+    width: 40px; height: 34px; border-radius: 6px;
+    background: var(--color-azul); color: #fff; font-weight: 800;
+}
+.boton-menu, .boton-cerrar {
+    border: 0; cursor: pointer; font: inherit;
+}
+.boton-menu {
+    display: none; border-radius: 6px; background: #e8f7f1;
+    color: #075d43; padding: 7px 12px; font-size: 22px;
+}
+.etiqueta-version {
+    margin-left: auto; color: var(--color-suave); font-size: 12px;
+    border: 1px solid var(--color-borde); border-radius: 99px; padding: 4px 10px;
+}
+.menu-lateral {
+    position: fixed; z-index: 120; left: 0; top: 64px; bottom: 0;
+    width: var(--ancho-menu); overflow-y: auto;
+    background: #fff; border-right: 1px solid var(--color-borde);
+    padding: 18px 14px 24px;
+}
+.menu-cabecera {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 8px 12px; font-size: 16px;
+}
+.boton-cerrar {
+    display: none; background: transparent; font-size: 28px; color: #667;
+}
+.etiqueta-busqueda {
+    display: block; margin: 6px 8px 5px; font-size: 12px;
+    color: var(--color-suave); font-weight: 700;
+}
+.buscador {
+    width: 100%; padding: 10px 11px; margin-bottom: 12px;
+    border: 1px solid #b9c9d3; border-radius: 7px; font: inherit;
+}
+#navegacion { display: grid; gap: 2px; }
+#navegacion a {
+    padding: 7px 10px; border-radius: 5px; text-decoration: none;
+    color: #294354; font-size: 14px;
+}
+#navegacion a:hover, #navegacion a:focus-visible {
+    background: #e4f5ee; color: #075d43;
+}
+.nota-menu { color: var(--color-suave); font-size: 12px; padding: 8px; }
+.fondo-menu { display: none; }
+
+.contenido {
+    margin-left: var(--ancho-menu);
+    max-width: 1250px;
+    padding: 28px clamp(18px, 3vw, 42px) 48px;
+}
+.hero {
+    padding: clamp(25px, 4vw, 48px);
+    border-radius: 14px;
+    color: #fff;
+    background: linear-gradient(125deg, #064e3b, #07845e 62%, #0aa777);
+    box-shadow: var(--sombra);
+}
+.sobre-titulo {
+    margin: 0 0 7px; letter-spacing: 2px; font-size: 11px; font-weight: 800;
+    color: #baf4d9;
+}
+.hero h1 { margin: 0; line-height: 1.15; font-size: clamp(32px, 4vw, 48px); }
+.hero > p:not(.sobre-titulo) { max-width: 760px; color: #e5fff3; font-size: 17px; }
+.hero-detalles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.hero-detalles span {
+    padding: 5px 10px; border-radius: 99px; font-size: 12px;
+    background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.2);
+}
+.panel-aviso {
+    margin: 20px 0; padding: 16px 20px;
+    background: #eaf5ff; border-left: 4px solid #2583c5; border-radius: 6px;
+}
+.panel-aviso p { margin: 5px 0 0; }
+.barra-resultados {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; margin: 24px 0 12px; color: var(--color-suave); font-size: 13px;
+}
+.boton-secundario {
+    padding: 7px 12px; background: #fff; border: 1px solid var(--color-borde);
+    border-radius: 6px; cursor: pointer; color: var(--color-texto); font: inherit;
+}
+.boton-secundario:hover { background: #eaf5ef; }
+.seccion {
+    background: var(--color-panel); border: 1px solid var(--color-borde);
+    border-radius: 12px; padding: clamp(18px, 2.4vw, 30px);
+    margin: 14px 0 22px; box-shadow: var(--sombra);
+    scroll-margin-top: 84px;
+}
+.titulo-seccion { display: flex; align-items: center; gap: 14px; margin-bottom: 15px; }
+.titulo-seccion > span {
+    display: grid; place-items: center; flex: 0 0 42px; height: 42px;
+    border-radius: 10px; background: #e3f6ed; color: #08744f; font-weight: 800;
+}
+.titulo-seccion p {
+    margin: 0; color: var(--color-azul-oscuro); font-size: 10px;
+    letter-spacing: 1.5px; font-weight: 800;
+}
+.titulo-seccion h2 { margin: 0; line-height: 1.35; font-size: clamp(20px, 2.4vw, 26px); }
+.introduccion { color: var(--color-suave); margin: 0 0 16px; }
+.tabla-contenedor { overflow-x: auto; border: 1px solid var(--color-borde); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 11px 14px; vertical-align: top; border-bottom: 1px solid #e4eaee; }
+th { background: #edf4f7; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: #405869; }
+tbody tr:nth-child(even) { background: #fafcfd; }
+tbody tr:hover { background: #eef9f4; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { min-width: 190px; }
+.nota { color: #526a7a; font-size: 13px; margin: 14px 0 0; }
+.muestras-colores {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 8px; margin: 16px 0 22px;
+}
+.muestra { padding: 11px 12px; border-radius: 5px; font-size: 12px; font-weight: 700; }
+.red { background: #f44336; color: white; } .pink { background: #e91e63; color: white; }
+.purple { background: #9c27b0; color: white; } .deep-purple { background: #673ab7; color: white; }
+.indigo { background: #3f51b5; color: white; } .blue { background: #2196f3; color: white; }
+.light-blue { background: #87ceeb; color: #111; } .cyan { background: #00bcd4; color: #111; }
+.teal { background: #009688; color: white; } .green { background: #4caf50; color: white; }
+.light-green { background: #8bc34a; color: #111; } .lime { background: #cddc39; color: #111; }
+.yellow { background: #ffeb3b; color: #111; } .amber { background: #ffc107; color: #111; }
+.orange { background: #ff9800; color: #111; } .deep-orange { background: #ff5722; color: white; }
+.brown { background: #795548; color: white; } .white { background: #fff; color: #111; border: 1px solid #ddd; }
+.light-gray { background: #f1f1f1; color: #111; } .gray { background: #9e9e9e; color: #111; }
+.dark-gray { background: #616161; color: white; } .black { background: #000; color: white; }
+.pale-blue { background: #ddffff; color: #111; } .pale-green { background: #ddffdd; color: #111; }
+.pie {
+    margin-top: 30px; padding: 22px 0; border-top: 1px solid var(--color-borde);
+    color: var(--color-suave); font-size: 13px;
+}
+.pie p { margin: 4px 0; }
+.oculto-por-busqueda { display: none !important; }
+.sin-resultados {
+    padding: 28px; text-align: center; background: #fff; border: 1px dashed #9aabb6;
+    border-radius: 10px; color: var(--color-suave);
+}
+
+@media (max-width: 850px) {
+    .boton-menu { display: inline-block; }
+    .menu-lateral { top: 0; width: min(310px, 88vw); z-index: 150; transform: translateX(-105%); transition: transform .2s ease; }
+    .menu-lateral.abierto { transform: translateX(0); }
+    .boton-cerrar { display: inline-block; }
+    .fondo-menu:not([hidden]) {
+        display: block; position: fixed; inset: 0; z-index: 140;
+        background: rgba(8, 25, 35, .45);
+    }
+    .contenido { margin-left: 0; padding: 18px 14px 34px; }
+    .etiqueta-version { font-size: 10px; }
+}
+@media (max-width: 520px) {
+    .cabecera { padding: 0 12px; gap: 10px; }
+    .marca { font-size: 15px; }
+    .marca-icono { width: 34px; height: 30px; }
+    .etiqueta-version { max-width: 100px; text-align: center; }
+    .hero { border-radius: 10px; }
+    th, td { padding: 9px 10px; }
+    td:first-child { min-width: 150px; }
+    .barra-resultados { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* =========================================
+   MODAL: DESPLAZAMIENTO HACIA LA DERECHA
+   ========================================= */
+
+.modal-desplazado {
+    margin-left: 320px;
+}
+
+/* =========================================
+   MODAL: BOTÓN DE CIERRE FIJO
+   ========================================= */
+
+/* El pie mantiene visible el botón de cierre */
+.modal-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+/* ==================================================
+   MODO OSCURO — REFERENCIA W3.CSS
+   Se activa con la clase modo-oscuro en <html>
+   ================================================== */
+
+/* 1. Colores generales */
+html.modo-oscuro {
+    color-scheme: dark;
+
+    --fondo-pagina: #181a1b;
+    --fondo-panel: #242729;
+    --fondo-alternativo: #303438;
+    --texto-principal: #e8e8e8;
+    --texto-secundario: #b8bec4;
+    --borde-oscuro: #454a4f;
+    --enlace-oscuro: #80bfff;
+}
+
+/* 2. Página y texto */
+html.modo-oscuro body {
+    background-color: var(--fondo-pagina);
+    color: var(--texto-principal);
+}
+
+html.modo-oscuro p,
+html.modo-oscuro li,
+html.modo-oscuro label,
+html.modo-oscuro th,
+html.modo-oscuro td {
+    color: var(--texto-principal);
+}
+
+html.modo-oscuro h1,
+html.modo-oscuro h2,
+html.modo-oscuro h3,
+html.modo-oscuro h4,
+html.modo-oscuro h5,
+html.modo-oscuro h6 {
+    color: var(--texto-principal);
+}
+
+html.modo-oscuro a {
+    color: var(--enlace-oscuro);
+}
+
+/* 3. Cabecera */
+html.modo-oscuro .cabecera {
+    background-color: #202326;
+    color: var(--texto-principal);
+    border-bottom: 1px solid var(--borde-oscuro);
+}
+
+html.modo-oscuro .marca {
+    color: var(--texto-principal);
+}
+
+html.modo-oscuro .etiqueta-version {
+    color: var(--texto-secundario);
+}
+
+html.modo-oscuro .boton-menu,
+html.modo-oscuro .boton-tema {
+    color: var(--texto-principal);
+}
+
+/* 4. Secciones y tarjetas */
+html.modo-oscuro .seccion,
+html.modo-oscuro .tarjeta,
+html.modo-oscuro .card {
+    background-color: var(--fondo-panel);
+    color: var(--texto-principal);
+    border-color: var(--borde-oscuro);
+}
+
+html.modo-oscuro .introduccion {
+    color: var(--texto-secundario);
+}
+
+/* 5. Tablas */
+html.modo-oscuro table {
+    background-color: var(--fondo-panel);
+    color: var(--texto-principal);
+    border-color: var(--borde-oscuro);
+}
+
+html.modo-oscuro th {
+    background-color: #30363b;
+    color: #fff;
+}
+
+html.modo-oscuro td,
+html.modo-oscuro th {
+    border-color: var(--borde-oscuro);
+}
+
+html.modo-oscuro tbody tr:nth-child(even) {
+    background-color: var(--fondo-alternativo);
+}
+
+html.modo-oscuro tbody tr:hover {
+    background-color: #3b4248;
+}
+
+/* 6. Menú lateral */
+html.modo-oscuro #menu-lateral {
+    background-color: #202326;
+    color: var(--texto-principal);
+    border-color: var(--borde-oscuro);
+}
+
+html.modo-oscuro #menu-lateral a {
+    color: var(--texto-principal);
+}
+
+html.modo-oscuro #menu-lateral a:hover {
+    background-color: #3b4248;
+}
+
+/* 7. Ventana modal de ejemplos */
+html.modo-oscuro .modal,
+html.modo-oscuro .modal-contenido,
+html.modo-oscuro .modal-content {
+    background-color: var(--fondo-panel);
+    color: var(--texto-principal);
+    border-color: var(--borde-oscuro);
+}
+
+html.modo-oscuro .modal-header,
+html.modo-oscuro .modal-footer {
+    background-color: #202326;
+    color: var(--texto-principal);
+    border-color: var(--borde-oscuro);
+}
+
+/* 8. Bloques de código */
+html.modo-oscuro pre,
+html.modo-oscuro code {
+    background-color: #202326;
+    color: #f0b6c3;
+    border-color: var(--borde-oscuro);
+}
+
+html.modo-oscuro pre {
+    overflow-x: auto;
+    padding: 12px;
+    border: 1px solid var(--borde-oscuro);
+    border-radius: 4px;
+}
+
+/* 9. Campos de formulario */
+html.modo-oscuro input,
+html.modo-oscuro select,
+html.modo-oscuro textarea {
+    background-color: #202326;
+    color: var(--texto-principal);
+    border: 1px solid var(--borde-oscuro);
+}
+
+html.modo-oscuro input::placeholder,
+html.modo-oscuro textarea::placeholder {
+    color: #aab1b7;
+}
+
+/* 10. Líneas y separadores */
+html.modo-oscuro hr,
+html.modo-oscuro .mi-linea {
+    border-color: var(--borde-oscuro);
+}
+
+/* 11. Estados de foco: teclado y accesibilidad */
+html.modo-oscuro button:focus-visible,
+html.modo-oscuro a:focus-visible,
+html.modo-oscuro input:focus-visible,
+html.modo-oscuro select:focus-visible,
+html.modo-oscuro textarea:focus-visible {
+    outline: 2px solid #80bfff;
+    outline-offset: 2px;
+}
+
+
+/* Panel de aviso: modo oscuro */
+html.modo-oscuro .panel-aviso {
+    background-color: #303438;
+    color: #e8e8e8;
+    border: 1px solid #454a4f;
+}
+
+html.modo-oscuro .panel-aviso strong {
+    color: #ffffff;
+}
+
+html.modo-oscuro .panel-aviso p {
+    color: #e8e8e8;
+}
+
+html.modo-oscuro .panel-aviso code {
+    background-color: #202326;
+    color: #ffb6c5;
+    border: 1px solid #454a4f;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+
+/* ==================================================
+   MODAL DE EJEMPLOS: MODO OSCURO
+   ================================================== */
+
+/* Fondo y texto de la ventana modal */
+html.modo-oscuro #modalEjemplo .w3-modal-content {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* Cabecera del modal */
+html.modo-oscuro #modalEjemplo header.w3-blue {
+    background-color: #263746 !important;
+    color: #ffffff !important;
+}
+
+/* Título */
+html.modo-oscuro #modalEjemplo h2 {
+    color: #ffffff;
+}
+
+/* Botón de cerrar (X) */
+html.modo-oscuro #modalEjemplo .w3-display-topright {
+    color: #ffffff;
+}
+
+/* Zona central donde JavaScript inserta los ejemplos */
+html.modo-oscuro #contenidoEjemplo {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* Pie del modal */
+html.modo-oscuro #modalEjemplo footer.w3-light-grey {
+    background-color: #303438 !important;
+    color: #f1f1f1 !important;
+    border-top: 1px solid #454a4f;
+}
+
+/* Botón Cerrar: conservamos el rojo */
+html.modo-oscuro #modalEjemplo footer .w3-button.w3-red {
+    background-color: #c62828 !important;
+    color: #ffffff !important;
+}
+
+/* Bloques de código */
+html.modo-oscuro #contenidoEjemplo pre {
+    background-color: #25282b;
+    color: #eeeeee;
+    border: 1px solid #454a4f;
+    overflow-x: auto;
+}
+
+/* Código en línea */
+html.modo-oscuro #contenidoEjemplo code {
+    color: #ffb6c5;
+}
+
+/* Enlaces dentro de los ejemplos */
+html.modo-oscuro #contenidoEjemplo a {
+    color: #8ab4f8;
+}
+
+/* Campos de entrada dentro de los ejemplos */
+html.modo-oscuro #contenidoEjemplo input,
+html.modo-oscuro #contenidoEjemplo select,
+html.modo-oscuro #contenidoEjemplo textarea {
+    background-color: #25282b;
+    color: #f1f1f1;
+    border-color: #60656b;
+}
