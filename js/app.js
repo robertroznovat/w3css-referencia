@@ -52,22 +52,59 @@ document.addEventListener("DOMContentLoaded", () => {
             cerrarMenu();
         }
     });
-
-    // Busca en el texto completo de cada sección, incluidas sus tablas.
+/* =========================================================
+   Busca clases y texto dentro de las secciones y sus tablas.
+   ========================================================= */
+    
     function filtrarSecciones() {
         const consulta = buscador.value.trim().toLocaleLowerCase("es");
-        let visibles = 0;
+        let filasVisibles = 0;
+        let seccionesVisibles = 0;
 
         secciones.forEach(seccion => {
-            const coincide = seccion.textContent.toLocaleLowerCase("es").includes(consulta);
-            seccion.classList.toggle("oculto-por-busqueda", !coincide);
-            if (coincide) visibles++;
+            const filas = seccion.querySelectorAll("tbody tr");
+            let coincideSeccion = false;
+
+            if (filas.length > 0) {
+                // Filtra las filas individualmente.
+                filas.forEach(fila => {
+                    const coincideFila =
+                        fila.textContent.toLocaleLowerCase("es").includes(consulta);
+
+                    fila.hidden = consulta !== "" && !coincideFila;
+
+                    if (consulta === "" || coincideFila) {
+                        filasVisibles++;
+                        coincideSeccion = true;
+                    }
+                });
+
+                // Mantiene visible la sección si contiene alguna coincidencia.
+                seccion.classList.toggle(
+                    "oculto-por-busqueda",
+                    consulta !== "" && !coincideSeccion
+                );
+            } else {
+                // En secciones sin tablas, busca en su texto completo.
+                coincideSeccion =
+                    seccion.textContent.toLocaleLowerCase("es").includes(consulta);
+
+                seccion.classList.toggle(
+                    "oculto-por-busqueda",
+                    consulta !== "" && !coincideSeccion
+                );
+            }
+
+            if (consulta === "" || coincideSeccion) {
+                seccionesVisibles++;
+            }
         });
 
         if (consulta === "") {
             contador.textContent = "Mostrando todas las secciones";
         } else {
-            contador.textContent = `${visibles} de ${secciones.length} secciones coinciden con «${buscador.value.trim()}»`;
+            contador.textContent =
+                `${filasVisibles} filas coinciden en ${seccionesVisibles} secciones con «${buscador.value.trim()}»`;
         }
 
         if (avisoSinResultados) {
@@ -75,23 +112,24 @@ document.addEventListener("DOMContentLoaded", () => {
             avisoSinResultados = null;
         }
 
-        // Si no hay coincidencias, informa al usuario sin dejar la página vacía.
-        if (visibles === 0) {
+        if (consulta !== "" && seccionesVisibles === 0) {
             avisoSinResultados = document.createElement("div");
             avisoSinResultados.className = "sin-resultados";
-            avisoSinResultados.textContent = "No se han encontrado secciones. Prueba con otro término o nombre de clase.";
+            avisoSinResultados.textContent =
+                "No se han encontrado coincidencias. Prueba con otra clase W3.CSS.";
             contador.closest(".barra-resultados").after(avisoSinResultados);
         }
     }
 
+   // Activa el filtrado al escribir.
     buscador.addEventListener("input", filtrarSecciones);
+   // Limpia el cuadro de búsqueda.
     limpiar.addEventListener("click", () => {
         buscador.value = "";
         filtrarSecciones();
         buscador.focus();
     });
 });
-
 
 /* =========================================
    DEMOSTRACIONES DE CLASES W3.CSS
