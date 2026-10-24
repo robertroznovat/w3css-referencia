@@ -60,8 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const consulta = buscador.value.trim().toLocaleLowerCase("es");
         let filasVisibles = 0;
         let seccionesVisibles = 0;
-
-        secciones.forEach(seccion => {
+        // Destaca el botón mientras haya una búsqueda activa.
+        limpiar.classList.toggle("aviso-limpiar", consulta !== "");
+        
+       secciones.forEach(seccion => {
             const filas = seccion.querySelectorAll("tbody tr");
             let coincideSeccion = false;
 
