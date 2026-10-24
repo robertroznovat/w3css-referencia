@@ -518,3 +518,35 @@ html.modo-oscuro #contenidoEjemplo textarea {
     color: #f1f1f1;
     border-color: #60656b;
 }
+
+/* ============================================================
+   Destaca el botón Limpiar mientras hay una búsqueda activa
+   ============================================================ */
+
+#limpiar-busqueda.aviso-limpiar {
+    animation: aviso-rojo 1s ease-in-out infinite;
+}
+
+/* Parpadeo suave en rojo, sin cambiar el tamaño del botón */
+@keyframes aviso-rojo {
+    0%, 100% {
+        opacity: 1;
+        background-color: #d32f2f;
+        color: #ffffff;
+    }
+
+    50% {
+        opacity: 0.65;
+        background-color: #b71c1c;
+        color: #ffffff;
+    }
+}
+
+/* Respeta a quienes prefieren reducir las animaciones */
+@media (prefers-reduced-motion: reduce) {
+    #limpiar-busqueda.aviso-limpiar {
+        animation: none;
+        background-color: #d32f2f;
+        color: #ffffff;
+    }
+}
