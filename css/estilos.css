@@ -550,3 +550,73 @@ html.modo-oscuro #contenidoEjemplo textarea {
         color: #ffffff;
     }
 }
+
+/* =========================================
+  correcciones 11/11/2026
+   ========================================= */
+
+/* =========================================
+   MODAL: ADAPTACIÓN A DISPOSITIVOS MÓVILES
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .modal-desplazado {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 24px);
+    }
+
+}
+
+/* =========================================
+   TABLA: DISTRIBUCIÓN DE COLUMNAS
+   ========================================= */
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+th:first-child,
+td:first-child {
+    width: 25%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 55%;
+}
+
+th:last-child,
+td:last-child {
+    width: 20%;
+}
+
+/* =========================================
+   TABLA 26 CSS VARIABLES: AJUSTE DE COLUMNAS
+   ========================================= */
+#variables table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#variables th:nth-child(1),
+#variables td:nth-child(1) {
+    width: 30%;
+}
+
+#variables th:nth-child(2),
+#variables td:nth-child(2) {
+    width: 25%;
+}
+
+#variables th:nth-child(3),
+#variables td:nth-child(3) {
+    width: 30%;
+}
+
+#variables th:nth-child(4),
+#variables td:nth-child(4) {
+    width: 15%;
+}
